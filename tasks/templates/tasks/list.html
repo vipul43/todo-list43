@@ -58,15 +58,15 @@
 
   <div class="todo-list">
 
-    {% for task in ts %}
+    {% for task in tasks %}
       <div class="item-row">
         <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
         <a class="btn btn-sm btn-danger" href="{% url 'delete_task' task.id %}">Delete</a>
 
         {% if task.complete == True %}
-          <strike>{{task.title}}</strike>
+          <strike>{{task}}</strike>
         {% else %}
-          <span>{{task.title}}</span>
+          <span>{{task}}</span>
         {% endif %}
       </div>
     {% endfor %}
