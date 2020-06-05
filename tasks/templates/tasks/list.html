@@ -64,9 +64,9 @@
         <a class="btn btn-sm btn-danger" href="{% url 'delete_task' task.id %}">Delete</a>
 
         {% if task.complete == True %}
-          <strike>{{task}}</strike>
+          <strike>{{task.title}}</strike>
         {% else %}
-          <span>{{task}}</span>
+          <span>{{task.title}}</span>
         {% endif %}
       </div>
     {% endfor %}
