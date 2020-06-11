@@ -5,7 +5,7 @@ from tasks.forms import TaskForm
 # Create your views here.
 
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all()[::-1]
 
     form = TaskForm()
 
